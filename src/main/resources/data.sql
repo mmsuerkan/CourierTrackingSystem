@@ -1,5 +1,3 @@
-
-
 INSERT INTO couriers (name, phone_number, email)
 VALUES ('John Doe', '123-456-7890', 'john.doe@example.com'),
        ('Jane Smith', '987-654-3210', 'jane.smith@example.com'),

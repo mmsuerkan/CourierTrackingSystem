@@ -18,25 +18,6 @@
     ```bash
     mvn spring-boot:run
     ```
-   
-## Veritabanı Ayarları
-Veritabanı olarak postgresql kullanılmıştır.
-
-kullanıcı adı: postgres
-şifre: postgres
-veritabanı adı: Tracking
-
-CREATE TABLE couriers
-(
-id           SERIAL PRIMARY KEY,
-name         VARCHAR(255) NOT NULL,
-phone_number VARCHAR(20)  NOT NULL,
-email        VARCHAR(255) NOT NULL
-);
-scripti ile kurye tablosu oluşturulmalıdır.
-
-## Kullanım
-
 
 **Uygulama başlarken önceden verilen stores.json dosyası ile mağazaları veritabanına kaydedilir.**
 
