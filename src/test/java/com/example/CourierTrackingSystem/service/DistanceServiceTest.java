@@ -6,17 +6,20 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class DistanceServiceTest {
 
+    DistanceService distanceService = new DistanceService();
+
     @Test
     void calculateDistance() {
-        double lat1 = 40.9923307;
-        double lon1 = 29.1244229;
+        //courier1
+        double lat1 = 40.992;
+        double lon1 = 29.124;
+        //Ataşehir MMM Migros
+        double lat2 = 40.9923307;
+        double lon2 = 29.1244229;
 
-        double lat2 = 40.986106;
-        double lon2 = 29.1161293;
+        double distance = distanceService.calculateDistance(lat1, lon1, lat2, lon2);
 
-        double distance = DistanceService.calculateDistance(lat1, lon1, lat2, lon2);
-
-        assertEquals(1000, customRound(distance, 3), 0.1);
+        assertEquals(50, customRound(distance,1), 0.1);
     }
 
     public static double customRound(double number, int roundingDigit) {

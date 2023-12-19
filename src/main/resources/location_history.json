@@ -1,0 +1,122 @@
+[
+  {
+    "courierId": 1,
+    "latitude": 40.992,
+    "longitude": 29.124,
+    "timestamp": "2023-12-17T12:30:00"
+  },
+  {
+    "courierId": 2,
+    "latitude": 40.986,
+    "longitude": 29.116,
+    "timestamp": "2023-12-17T12:35:00"
+  },
+  {
+    "courierId": 3,
+    "latitude": 41.006,
+    "longitude": 28.655,
+    "timestamp": "2023-12-17T12:40:00"
+  },
+  {
+    "courierId": 4,
+    "latitude": 41.007,
+    "longitude": 28.658,
+    "timestamp": "2023-12-17T12:45:00"
+  },
+  {
+    "courierId": 5,
+    "latitude": 40.991,
+    "longitude": 29.123,
+    "timestamp": "2023-12-17T12:50:00"
+  },
+  {
+    "courierId": 6,
+    "latitude": 40.985,
+    "longitude": 29.115,
+    "timestamp": "2023-12-17T12:55:00"
+  },
+  {
+    "courierId": 7,
+    "latitude": 40.980,
+    "longitude": 29.120,
+    "timestamp": "2023-12-17T13:00:00"
+  },
+  {
+    "courierId": 8,
+    "latitude": 41.012,
+    "longitude": 28.652,
+    "timestamp": "2023-12-17T13:05:00"
+  },
+  {
+    "courierId": 9,
+    "latitude": 40.967,
+    "longitude": 29.068,
+    "timestamp": "2023-12-17T13:10:00"
+  },
+  {
+    "courierId": 10,
+    "latitude": 41.015,
+    "longitude": 28.663,
+    "timestamp": "2023-12-17T13:15:00"
+  },
+  {
+    "courierId": 11,
+    "latitude": 40.992,
+    "longitude": 29.124,
+    "timestamp": "2023-12-17T13:30:00"
+  },
+  {
+    "courierId": 12,
+    "latitude": 40.986,
+    "longitude": 29.116,
+    "timestamp": "2023-12-17T13:35:00"
+  },
+  {
+    "courierId": 13,
+    "latitude": 41.006,
+    "longitude": 28.655,
+    "timestamp": "2023-12-17T13:40:00"
+  },
+  {
+    "courierId": 14,
+    "latitude": 41.007,
+    "longitude": 28.658,
+    "timestamp": "2023-12-17T13:45:00"
+  },
+  {
+    "courierId": 15,
+    "latitude": 40.991,
+    "longitude": 29.123,
+    "timestamp": "2023-12-17T13:50:00"
+  },
+  {
+    "courierId": 16,
+    "latitude": 40.996,
+    "longitude": 29.119,
+    "timestamp": "2023-12-17T13:55:00"
+  },
+  {
+    "courierId": 17,
+    "latitude": 40.980,
+    "longitude": 29.120,
+    "timestamp": "2023-12-17T14:00:00"
+  },
+  {
+    "courierId": 18,
+    "latitude": 41.012,
+    "longitude": 28.652,
+    "timestamp": "2023-12-17T14:05:00"
+  },
+  {
+    "courierId": 19,
+    "latitude": 40.967,
+    "longitude": 29.068,
+    "timestamp": "2023-12-17T14:10:00"
+  },
+  {
+    "courierId": 20,
+    "latitude": 41.015,
+    "longitude": 28.663,
+    "timestamp": "2023-12-17T14:15:00"
+  }
+]

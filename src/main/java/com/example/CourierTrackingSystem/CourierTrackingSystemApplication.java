@@ -6,6 +6,7 @@ import com.example.CourierTrackingSystem.model.Store;
 import com.example.CourierTrackingSystem.repository.StoreRepository;
 import com.example.CourierTrackingSystem.service.StoreService;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.CommandLineRunner;
@@ -18,6 +19,7 @@ import java.util.Arrays;
 import java.util.List;
 
 @SpringBootApplication
+@RequiredArgsConstructor
 public class CourierTrackingSystemApplication implements CommandLineRunner {
 
 	private final StoreMapper storeMapper;
@@ -25,12 +27,6 @@ public class CourierTrackingSystemApplication implements CommandLineRunner {
 
 	@Value("${stores.resources.path}")
 	private String storesResourcesPath;
-
-	@Autowired
-	public CourierTrackingSystemApplication(StoreMapper storeMapper, StoreService storeService) {
-		this.storeMapper = storeMapper;
-		this.storeService = storeService;
-	}
 
 	public static void main(String[] args) {
 		SpringApplication.run(CourierTrackingSystemApplication.class, args);
