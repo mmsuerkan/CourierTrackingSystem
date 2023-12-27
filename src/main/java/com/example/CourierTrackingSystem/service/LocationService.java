@@ -47,11 +47,6 @@ public class LocationService {
                     throw new ReentriesException("Reentries to the same store's circumference over 1 minute");
                 }
                 break;
-            } else {
-                LocationHistory locationHistory = locationHistoryMapper.dtoToEntity(locationHistoryDto);
-                locationHistory.setCourier(courierService.getCourierById(locationHistoryDto.getCourierId()));
-                locationHistoryRepository.save(locationHistory);
-                break;
             }
         }
     }
