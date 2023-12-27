@@ -19,11 +19,6 @@ public class DistanceService {
 
     private final CourierService courierService;
 
-    public DistanceService() {
-        this.locationHistoryRepository = null;
-        this.courierService = null;
-    }
-
     public double calculateDistance(double lat1, double lon1, double lat2, double lon2) {
         // Convert latitude and longitude from degrees to radians
         double radLat1 = Math.toRadians(lat1);
