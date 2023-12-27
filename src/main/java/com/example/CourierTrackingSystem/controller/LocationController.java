@@ -1,6 +1,7 @@
 package com.example.CourierTrackingSystem.controller;
 
 import com.example.CourierTrackingSystem.dto.LocationHistoryDto;
+import com.example.CourierTrackingSystem.exception.DistanceException;
 import com.example.CourierTrackingSystem.exception.ReentriesException;
 import com.example.CourierTrackingSystem.service.LocationService;
 import com.example.CourierTrackingSystem.exception.StoreNotFoundException;
@@ -30,6 +31,8 @@ public class LocationController {
         } catch (ReentriesException e) {
             logger.info("Reentries to the same store's circumference over 1 minute");
             return ResponseEntity.ok("Reentries to the same store's circumference over 1 minute");
+        } catch (DistanceException e) {
+            throw new RuntimeException(e);
         }
     }
 }

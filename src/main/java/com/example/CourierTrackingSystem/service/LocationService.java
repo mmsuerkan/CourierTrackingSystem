@@ -1,6 +1,7 @@
 package com.example.CourierTrackingSystem.service;
 
 import com.example.CourierTrackingSystem.dto.LocationHistoryDto;
+import com.example.CourierTrackingSystem.exception.DistanceException;
 import com.example.CourierTrackingSystem.exception.ReentriesException;
 import com.example.CourierTrackingSystem.exception.StoreNotFoundException;
 import com.example.CourierTrackingSystem.mapper.LocationHistoryMapper;
@@ -26,7 +27,7 @@ public class LocationService {
     private final DistanceService distanceService;
     private final LocationHistoryMapper locationHistoryMapper;
 
-    public void processLocationLog(LocationHistoryDto locationHistoryDto) throws StoreNotFoundException, ReentriesException {
+    public void processLocationLog(LocationHistoryDto locationHistoryDto) throws StoreNotFoundException, ReentriesException, RuntimeException, DistanceException {
 
         List<Store> stores = storeRepository.findAll();
 
@@ -47,7 +48,7 @@ public class LocationService {
                     throw new ReentriesException("Reentries to the same store's circumference over 1 minute");
                 }
                 break;
-            }
+            }else throw new DistanceException("Courier don't enters radius of 100 meters from Migros stores.");
         }
     }
 
