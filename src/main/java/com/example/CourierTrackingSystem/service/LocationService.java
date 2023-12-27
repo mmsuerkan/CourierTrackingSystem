@@ -27,7 +27,7 @@ public class LocationService {
     private final DistanceService distanceService;
     private final LocationHistoryMapper locationHistoryMapper;
 
-    public void processLocationLog(LocationHistoryDto locationHistoryDto) throws StoreNotFoundException, ReentriesException, RuntimeException, DistanceException {
+    public void processLocationLog(LocationHistoryDto locationHistoryDto) throws StoreNotFoundException, ReentriesException, RuntimeException {
 
         List<Store> stores = storeRepository.findAll();
 
@@ -48,7 +48,12 @@ public class LocationService {
                     throw new ReentriesException("Reentries to the same store's circumference over 1 minute");
                 }
                 break;
-            }else throw new DistanceException("Courier don't enters radius of 100 meters from Migros stores.");
+            } else {
+                LocationHistory locationHistory = locationHistoryMapper.dtoToEntity(locationHistoryDto);
+                locationHistory.setCourier(courierService.getCourierById(locationHistoryDto.getCourierId()));
+                locationHistoryRepository.save(locationHistory);
+                break;
+            }
         }
     }
 

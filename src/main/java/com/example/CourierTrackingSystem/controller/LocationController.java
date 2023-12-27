@@ -23,7 +23,7 @@ public class LocationController {
     private final LocationService locationService;
     Logger logger = LoggerFactory.getLogger(LocationController.class);
     @PostMapping("/log")
-    public ResponseEntity<String> logLocation(@RequestBody LocationHistoryDto locationHistoryDto) throws StoreNotFoundException {
+    public ResponseEntity<String> logLocation(@RequestBody LocationHistoryDto locationHistoryDto) throws StoreNotFoundException, DistanceException {
         try {
             locationService.processLocationLog(locationHistoryDto);
             logger.info("Location logged successfully");
@@ -31,8 +31,6 @@ public class LocationController {
         } catch (ReentriesException e) {
             logger.info("Reentries to the same store's circumference over 1 minute");
             return ResponseEntity.ok("Reentries to the same store's circumference over 1 minute");
-        } catch (DistanceException e) {
-            throw new RuntimeException(e);
         }
     }
 }
