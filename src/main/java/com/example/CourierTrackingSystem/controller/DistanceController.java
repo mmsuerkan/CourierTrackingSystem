@@ -24,8 +24,8 @@ public class DistanceController {
         try {
             return ResponseEntity.ok(String.valueOf(distanceService.getCourierTotalTravelDistance(courierId)));
         } catch (RuntimeException e) {
-            logger.info("Courier not found");
-            return ResponseEntity.ok("Courier not found");
+            logger.info("Error occured");
+            return ResponseEntity.ok("Error occured");
         }
     }
 }
